@@ -47,7 +47,10 @@ body {
 }
 :root {
     --header_clr : #dddddd;
+    --header_txt_clr:#05386B;
     --section_bgc: #ffffff;
+    --Head_bgc:#379683;
+    --hover_clr:#EDF5E1;
 }
 
 /* Common Css Section Ends */
@@ -64,3 +67,54 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* Preloader Section Ends */
+
+/* Header Section Starts*/
+#nav {
+    background-color: var(--Head_bgc);
+}
+#nav .logo{
+    width: 20%;
+}
+#nav .logo img {
+    height: 60px;
+}
+#nav .menu{
+    text-align: right;
+    width: 80%;
+}
+#nav .menu_animate{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: smooth .5s;
+}
+@keyframes smooth {
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 0;
+    }
+}
+#nav .menu ul {
+    text-align: right;
+}
+#nav .menu ul li {
+    display: inline-block;
+    padding:12px;
+}
+#nav .menu ul li:last-child {
+    padding-right: 0;
+}
+#nav .menu ul li a {
+    color:var(--header_txt_clr);
+    font-size: 16px;
+    transition: all linear 0.3s;
+}
+#nav .menu ul li:hover a {
+    color: var(--hover_clr);
+}
+/* Header Section Ends*/
