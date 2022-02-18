@@ -17,3 +17,50 @@ Table of Contents
 11)
 12)
 */
+
+/* Common Css Section Starts */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.align_center {
+    align-items: center;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+:root {
+    --header_clr : #dddddd;
+    --section_bgc: #ffffff;
+}
+
+/* Common Css Section Ends */
+
+/* Preloader Section Starts */
+#preloader {
+    background-color: #e5eff1;
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    z-index: 9999999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
