@@ -51,6 +51,10 @@ body {
     --section_bgc: #ffffff;
     --Head_bgc:#379683;
     --hover_clr:#EDF5E1;
+    --AN:#C3073F;
+    --x:#8EE4AF;
+    --Y:#5CDB95;
+    --overlay:rgba(0,0,0,0.4);
 }
 
 /* Common Css Section Ends */
@@ -118,3 +122,98 @@ body {
     color: var(--hover_clr);
 }
 /* Header Section Ends*/
+/* Banner Section Starts */
+#banner .slider_item{
+    height: 570px;
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    position: relative;
+    z-index: 1;
+}
+#banner .slider_item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay);
+    z-index: -1;
+}
+#banner .slider_icon {
+    height: 46px;
+    width: 46px;
+    color: var(--AN);
+    background: none;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    bottom: 10px;
+    right: calc(50%);
+    z-index: 99;
+    margin: 5px;
+    font-size: 24px;
+    border: 1px solid var(--hover_clr);
+    transition: all linear 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+ }
+ #banner:hover .slider_icon {
+    opacity: 1;
+    visibility: visible;
+ }
+ #banner .slider_icon.fa-angle-right {
+    left: calc(50%);
+    right: auto;
+ }
+ #banner .slider_icon:hover {
+    background-color: var(--x);
+ }
+#banner .row,
+#banner .container {
+    height: 100%;
+    justify-content: center;
+}
+#banner .banner-content{
+    text-align: center;
+    color: var(--section_bgc);
+}
+#banner .banner-content h4{
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+#banner .banner-content span{
+    padding: 6px 0;
+    color: var(--Head_bgc);
+    font-weight: 800;
+    letter-spacing: -7px;
+}
+#banner .banner-content h1{
+    padding: 16px 0;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+#banner .banner-content p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+#banner .banner-content a{
+    display: inline-block;
+    font-size: 18px;
+    color: var(--section_bgc);
+    margin: 12px 0;
+    padding: 12px 10px;
+    background-color: var(--header_txt_clr);
+    transition: all linear 0.4s;
+    outline: 1px solid var(--hover_clr);
+}
+#banner .banner-content a:hover{
+    background-color: var(--Y);
+}
+/* Banner Section Ends */
