@@ -257,3 +257,47 @@ body {
     color: var(--AN);
 }
 /* About Section Ends Here */
+
+/* Acheivement Section Starts Here */
+#achievment{
+    background-image: url(../image/achievement.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 280px;
+    position: relative;
+    z-index: 1;
+    color: var(--section_bgc);
+}
+#achievment::after{
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--overlay);
+}
+.section_heading {
+    text-align: center;
+    padding: 20px 0;
+}
+.section_heading h2{
+    font-size: 32px;
+    color: var(--x);
+}
+.ach_content{
+    width: 25%;
+    padding: 40px 0;
+    text-align: center;
+}
+.ach_content i {
+   font-size: 32px;
+   padding-bottom: 20px;
+}
+.ach_content h3{
+    padding-top: 12px;
+    font-size: 24px;
+    font-weight: 600;
+}
+/* Acheivement Section Ends Here */

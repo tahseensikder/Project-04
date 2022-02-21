@@ -20,4 +20,7 @@ $(function(){
         autoplaySpeed: 3000,
         speed: 1000,
     })
+    $('.increment').spincrement({
+        duration:3000,
+    })
 })
